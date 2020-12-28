@@ -1,0 +1,83 @@
+.about {
+  height: 1242px;
+  background: url(/catalog/view/theme/default/image/cocina/background-footer.jpg);
+  color: #fff;
+}
+
+.about__title {
+  padding-top: 66px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.about__info {
+  max-width: 1410px;
+  margin: 0 auto;
+  margin-top: 58px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__text-desc {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.about__text-title {
+  font-size: 32px;
+}
+
+.about__text {
+  width: 456px;
+}
+
+.about__contacts {
+  font-size: 24px;
+}
+
+.about__contacts-title {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.about__contacts-textvalue {
+  margin-top: 22px;
+}
+
+.about__contacts-value {
+  font-weight: bold;
+}
+
+.about__contacts-social {
+  margin-top: 26px;
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.about__carousel {
+  position: absolute;
+  width: 97%;
+  margin-top: 600px;
+  padding-left: 3%;
+}
+
+.about__instagram-button-link {
+  text-decoration: none;
+}
+
+.about__instagram-button {
+  width: 210px;
+  height: 46px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border-radius: 9px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  margin-top: 620px;
+}

@@ -1,0 +1,82 @@
+.topbar {
+  height: 64px;
+  position: fixed;
+  background: radial-gradient(#000, transparent);
+  z-index: 999;
+  width: 100%;
+}
+
+.topbar__layer {
+  max-width: 1410px;
+  height: 64px;
+  margin: 0 auto;
+  left: 50%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar__logo {
+  margin-top: 14px;
+  display: inline-block;
+}
+
+.topbar__menu {
+  width: 680px;
+  display: inline-block;
+}
+
+.topbar__menu-item {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 30px;
+}
+
+.topbar__phone {
+  width: 200px;
+}
+
+.topbar__menu-phone {
+  display: none;
+}
+
+.topbar__cart-area {
+  width: 150px;
+}
+
+.topbar__menu-lang-mobile {
+  display: none;
+}
+
+.topbar__menu-lang {
+  border-bottom: 1px dashed;
+  cursor: pointer;
+}
+
+.topbar__menu-lang .dropdown-menu {
+  display: none;
+}
+
+.topbar__menu-lang.open .dropdown-menu {
+  display: block;
+}
+
+.topbar__menu-lang-list {
+  padding: 0;
+  position: absolute;
+}
+
+.topbar__menu-lang-item {
+  list-style-type: none;
+}
+
+.topbar__menu-lang-button {
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}

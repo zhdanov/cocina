@@ -1,0 +1,159 @@
+.products__category-name {
+  margin-top: 115px;
+  margin-bottom: -30px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 36px;
+}
+
+.products__list {
+  max-width: 1410px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.products__list-search-result {
+  max-width: 1410px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__item {
+  margin-top: 77px;
+  width: 49%;
+}
+
+.products__item-mini {
+  margin-top: 77px;
+  width: 24%;
+}
+
+.products__item-search-result {
+  margin-top: 77px;
+  margin-right: 40px;
+}
+
+.products__item-image {
+  width: 100%;
+}
+
+.products__item-image-noactive {
+  opacity: 0.5;
+}
+
+.products__item-image-mini {
+  width: 329px;
+  height: 256px;
+}
+
+.products__desc-area {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products__desc-area-mini {
+  margin-top: 28px;
+}
+
+.products__item-title {
+  width: 195px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.products__item-title-mini {
+  font-weight: bold;
+  font-size: 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 327px;
+}
+
+.products__item-desc-short-area {
+  width: 345px;
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+.products__item-desc-short-area-mini {
+  width: 329px;
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+.products__item-desc-short {
+  height: 50px;
+}
+
+.products__item-desc-short-mini {
+  margin-top: 12px;
+  height: 75px;
+  -webkit-line-clamp: 3;
+}
+
+.products__item-price {
+  margin-top: 17px;
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 26px;
+  text-align: right;
+  width: 115px;
+}
+
+.products__item-price-mini {
+  margin-top: 28px;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.products__item-button-area {
+  text-align: center;
+}
+
+.products__item-button {
+  width: 298px;
+  height: 46px;
+  background-color: $colorBrown;
+  color: #fff;
+  margin-top: 33px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.products__item-button-price {
+  display: none;
+}
+
+.products__item-button-mini {
+  width: 117px;
+  height: 40px;
+  background-color: $colorBrown;
+  color: #fff;
+  margin-top: -35px;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  float: right;
+}
+
+.products__text-empty {
+  margin-top: 250px;
+  text-align: center;
+  width: 100%;
+  height: 230px;
+  font-weight: bold;
+  font-size: 24px;
+}

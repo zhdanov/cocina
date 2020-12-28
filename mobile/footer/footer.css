@@ -1,0 +1,40 @@
+.footer {
+  margin: 0 auto;
+}
+
+.footer__logo {
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.footer__menu {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__menu-item {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  color: $colorBrown;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.footer__phone-number {
+  float: right;
+  margin-top: -66px;
+  margin-left: -40px;
+  height: 20px;
+}
+
+.footer__social {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}

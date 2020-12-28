@@ -1,0 +1,23 @@
+.search__input {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 11px;
+  width: 100px;
+  font-size: 16px;
+}
+
+.search__input:focus {
+  outline: none;
+}
+
+.search__icon {
+  margin-left: -40px;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+}

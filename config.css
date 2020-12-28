@@ -1,0 +1,7 @@
+$desktopWithMin:          1025px;
+$mobileLandscapeMinWidth: 451px;
+$mobileLandscapeMaxWidth: 1024px;
+$mobilePortraitMaxWidth:  450px;
+
+$colorBrown: #522d18;
+$colorGray: #a6a6a6;

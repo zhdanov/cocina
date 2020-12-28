@@ -1,0 +1,27 @@
+.cart__cart {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.cart__count {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  line-height: 16px;
+  display: inline-block;
+  text-align: center;
+  margin-top: -2px;
+  margin-left: -5px;
+  float: right;
+}
+
+.cart__currency {
+  margin-top: 4px;
+  padding-right: 6px;
+  float: right;
+}

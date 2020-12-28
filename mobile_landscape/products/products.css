@@ -1,0 +1,23 @@
+.products__list {
+  min-width: 642px;
+}
+
+.products__item {
+  width: 320px;
+}
+
+.products__desc-area {
+  width: 105px;
+}
+
+.products__desc-area-mini {
+  width: 105px;
+}
+
+.products__item-desc-short {
+  width: auto;
+}
+
+.products__item-desc-short-mini {
+  width: auto;
+}

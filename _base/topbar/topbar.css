@@ -1,0 +1,21 @@
+.topbar__menu-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.topbar__phone-number {
+  display: inline-block;
+}
+
+.topbar__search {
+  display: inline-block;
+  width: 200px;
+}
+
+.topbar__cart {
+  margin-top: 7px;
+}
+
+.topbar__menu-mobile-icon {
+  display: none;
+}

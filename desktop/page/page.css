@@ -1,0 +1,16 @@
+.page__about {
+  margin-top: 53px;
+}
+
+.page__layout {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding-top: 130px;
+}
+
+.page__footer {
+  max-width: 1410px;
+  margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 33px;
+}

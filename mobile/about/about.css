@@ -1,0 +1,66 @@
+.about__carousel {
+  display: none;
+}
+
+.about {
+  height: 477px;
+  background: url(/catalog/view/theme/default/image/cocina/background-mobile-footer.jpg);
+  background-position: center;
+  color: #fff;
+  margin-top: 46px;
+}
+
+.about__logo {
+  display: none;
+}
+
+.about__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about__text {
+  padding-top: 18px;
+  width: 312px;
+  height: 154px;
+  margin: 0 auto;
+}
+
+.about__text-title {
+  font-size: 16px;
+}
+
+.about__text-desc {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.about__contacts {
+  width: 312px;
+  margin: 0 auto;
+}
+
+.about__contacts-title {
+  font-weight: bold;
+  margin-bottom: 11px;
+}
+
+.about__instagram-button {
+  display: none;
+}
+
+.about__contacts-textvalue {
+  margin-top: 6px;
+}
+
+.about__contacts-social {
+  margin-top: 33px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__contacts-value {
+  font-weight: bold;
+}

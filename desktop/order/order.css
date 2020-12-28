@@ -1,0 +1,181 @@
+.order__radio {
+  width: 16px;
+  height: 16px;
+}
+
+.order__field {
+  border-radius: 0;
+  -webkit-appearance: none;
+  border: 0;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  padding-left: 37px;
+  height: 64px;
+}
+
+.order__field:focus {
+  outline: none;
+}
+
+.order__row-area {
+  max-width: 1230px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 51px;
+}
+
+.order__title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.order__title-pay {
+  margin-top: 112px;
+}
+
+.order__name {
+  width: 45%;
+}
+
+.order__phone {
+  width: 45%;
+}
+
+.order__email {
+  width: 45%;
+  margin-left: auto;
+}
+
+.order__delivery-title {
+  cursor: pointer;
+}
+
+.order__delivery-pickup-title {
+  cursor: pointer;
+}
+
+.order__delivery-radio {
+  margin-top: 139px;
+  margin-right: 100px;
+}
+
+.order__city {
+  width: 45%;
+}
+
+.order__street {
+  width: 45%;
+}
+
+.order__delivery {
+  width: 48%;
+}
+
+.order__province {
+  width: 45%;
+}
+
+.order__house {
+  width: 22%;
+}
+
+.order__flat {
+  width: 16%;
+}
+
+.order_delivery-pickup-area {
+  display: none;
+  margin-top: 68px;
+}
+
+.order__comment {
+  width: 100%;
+  height: 128px;
+  padding-top: 27px;
+}
+
+.order__notice {
+  max-width: 1230px;
+  margin-top: 29px;
+  font-size: 18px;
+}
+
+.order__notice-alert {
+  position: absolute;
+  color: red;
+  margin-left: -30px;
+  margin-top: -20px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.order__payment-area {
+  margin-top: 51px;
+}
+
+.order__payment-cash {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.order__payment-card {
+  font-size: 24px;
+  cursor: pointer;
+  color: $colorGray;
+  margin-left: 72px;
+}
+
+.order__do-area {
+  max-width: 1230px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.order__do {
+  width: 189px;
+  height: 46px;
+  background-color: $colorBrown;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.order_agree-text-area {
+  max-width: 1230px;
+  margin-top: 38px;
+}
+
+.order_agree-text {
+  color: $colorBrown;
+  width: 572px;
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.order__error {
+  font-size: 18px;
+  position: absolute;
+  color: red;
+  margin-top: -40px;
+  margin-left: -55px;
+  display: none;
+}
+
+.order__note {
+  width: 740px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.order__note-alert {
+  position: absolute;
+  color: red;
+  margin-left: -30px;
+  margin-top: -10px;
+  font-size: 70px;
+  font-weight: bold;
+}

@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__menu {
+  width: 880px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__menu-item {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  color: $colorBrown;
+}
+
+.footer__phone-number {
+  margin-left: 20px;
+}
+
+.footer__social {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
