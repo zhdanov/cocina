@@ -1,2 +1,2 @@
-# cocina-frontend
-Frontend for cocinadeljefe.com
+# cocina
+Frontend and ci for cocinadeljefe.com

@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Chart.Name }}-{{ env "environment" }}
+spec:
+  serviceName: {{ .Chart.Name }}-{{ env "environment" }}
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Chart.Name }}-{{ env "environment" }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Chart.Name }}-{{ env "environment" }}
+    spec:
+      containers:
+      - name: nginx
+        {{ tuple (printf "%s-%s" .Chart.Name "nginx") . | werf_container_image }}
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        volumeMounts:
+          - name: config-volume
+            subPath: nginx.conf
+            mountPath: /etc/nginx/nginx.conf
+          - name: data-store
+            mountPath: /var/www
+            subPath: {{ .Chart.Name }}-www
+      - name: php-fpm
+        {{ tuple (printf "%s-%s" .Chart.Name "php-fpm") . | werf_container_image }}
+        env:
+        - name: SSH_AUTH_SOCK
+          value: /ssh-agent
+        ports:
+        - containerPort: 9000
+          name: http
+          protocol: TCP
+        volumeMounts:
+          - name: ssh-agent-sock
+            mountPath: /ssh-agent
+          - name: data-store
+            mountPath: /var/www
+            subPath: {{ .Chart.Name }}-www
+      - name: mariadb
+        {{ tuple (printf "%s-%s" .Chart.Name "mariadb") . | werf_container_image }}
+        ports:
+        - containerPort: 3306
+          name: mysql
+          protocol: TCP
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: {{ .Values.mysql.password }}
+        volumeMounts:
+        - name: data-store
+          mountPath: /var/lib/mysql
+          subPath: {{ .Chart.Name }}-mariadb
+      volumes:
+      - name: config-volume
+        configMap:
+          name: {{ .Chart.Name }}-config-files
+      - name: data-store
+        persistentVolumeClaim:
+          claimName: nfs-pvc-{{ .Chart.Name }}-{{ env "environment" }}
+      - name: ssh-agent-sock
+        hostPath:
+          path: /ssh-agent
+          type: Socket
