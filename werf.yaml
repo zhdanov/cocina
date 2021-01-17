@@ -15,10 +15,18 @@ docker:
   USER: root
   WORKDIR: /var/www/html
   EXPOSE: "9000"
+git:
+- add: /
+  to: /root/cocina
+  stageDependencies:
+    install:
+      - "**/*"
+    setup:
+      - "**/*"
 ansible:
   beforeInstall:
   - name: install packages for php-fpm
-    shell: apk add --no-cache bash vim
+    shell: apk add --no-cache bash vim zip openssh git
   - name:  install php-extentions
     shell: |
       cd /tmp/
@@ -30,6 +38,8 @@ ansible:
   - name: install php config
     shell: |
       cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
+  - name:  ssh_config for gitlab
+    shell: printf "Host gitlab-prod.gitlab-prod.svc.cluster.local\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n" >> /etc/ssh/ssh_config
 
 ---
 image: {{ env "appname" }}-mariadb

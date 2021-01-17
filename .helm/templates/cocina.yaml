@@ -29,9 +29,18 @@ spec:
             subPath: {{ .Chart.Name }}-www
       - name: php-fpm
         {{ tuple (printf "%s-%s" .Chart.Name "php-fpm") . | werf_container_image }}
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - "sh"
+                - "-c"
+                - "/root/cocina/container-post-start.bash"
         env:
         - name: SSH_AUTH_SOCK
           value: /ssh-agent
+        - name: ENVIRONMENT
+          value: {{ env "environment" }}
         ports:
         - containerPort: 9000
           name: http
