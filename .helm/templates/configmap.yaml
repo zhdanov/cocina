@@ -45,7 +45,7 @@ data:
         server_name {{ .Chart.Name }}-{{ env "environment" }}.loc
         client_max_body_size 11m;
         index index.html index.htm index.php;
-        root /var/www/html/upload;
+        root /var/www/cocina-backend/upload;
 
         location ~ [^/]\.php(/|$) {
           fastcgi_split_path_info ^(.+?\.php)(/.*)$;

@@ -26,15 +26,11 @@ git:
 ansible:
   beforeInstall:
   - name: install packages for php-fpm
-    shell: apk add --no-cache bash vim zip openssh git
+    shell: apk add --no-cache libc-dev autoconf make gcc g++ bash vim zip libzip-dev libpng-dev jpeg-dev openssh git php7-dev
   - name:  install php-extentions
     shell: |
-      cd /tmp/
-      curl https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/master/install-php-extensions >> install-php-extensions
-      mv install-php-extensions /usr/local/bin/
-      chmod uga+x /usr/local/bin/install-php-extensions && sync
-      # install pecl extensions
-      install-php-extensions gd zip pdo_mysql
+      docker-php-ext-configure gd --with-jpeg
+      docker-php-ext-install -j$(nproc) gd zip pdo_mysql mysqli
   - name: install php config
     shell: |
       cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini

@@ -41,6 +41,8 @@ spec:
           value: /ssh-agent
         - name: ENVIRONMENT
           value: {{ env "environment" }}
+        - name: HOME_USER_NAME
+          value: {{ env "HOME_USER_NAME" }}
         ports:
         - containerPort: 9000
           name: http
