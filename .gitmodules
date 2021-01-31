@@ -1,0 +1,3 @@
+[submodule "hakunamatata"]
+	path = hakunamatata
+	url = https://github.com/zhdanov/hakunamatata

@@ -40,3 +40,12 @@ ansible:
 ---
 image: {{ env "appname" }}-mariadb
 from: mariadb:10.5.8-focal
+
+---
+image: {{ env "appname" }}-wait-http-200
+from: alpine:3.13.0
+ansible:
+  beforeInstall:
+  - name: install packages
+    shell: |
+      apk add --no-cache curl
