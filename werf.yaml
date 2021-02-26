@@ -26,7 +26,7 @@ git:
 ansible:
   beforeInstall:
   - name: install packages for php-fpm
-    shell: apk add --no-cache libc-dev autoconf make gcc g++ bash vim zip libzip-dev libpng-dev jpeg-dev openssh git php7-dev
+    shell: apk add --no-cache libc-dev autoconf make gcc g++ bash vim zip libzip-dev libpng-dev jpeg-dev openssh git php7-dev npm
   - name:  install php-extentions
     shell: |
       docker-php-ext-configure gd --with-jpeg
