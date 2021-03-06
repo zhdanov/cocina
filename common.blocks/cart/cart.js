@@ -18,26 +18,30 @@ switch (data.action) {
   /* добавить в корзину */
   case 'add':
 
-    const formData = new FormData();
-    formData.append('product_id', data.product_id);
+    let hData = {};
 
     let quantity = 1;
     if (data.hasOwnProperty('quantity')) {
       quantity = parseInt(data.quantity);
     }
-    formData.append('quantity', quantity);
+
+    hData = {
+      'product_id': data.product_id,
+      'quantity': quantity,
+    };
 
     if (data.hasOwnProperty('option_id') && data.hasOwnProperty('option_value')) {
-      formData.append('option['+data.option_id+']', data.option_value);
+      if (data.option_id !== null && data.option_value !== null) {
+        hData['option'] = {
+          [data.option_id]: data.option_value
+        };
+      }
     }
 
     jQuery.ajax({
       url: '/index.php?route=checkout/cart/add',
-      data: formData,
+      data: {h_data: JSON.stringify(hData)},
       cache: false,
-      contentType: false,
-      processData: false,
-      method: 'POST',
       type: 'POST',
       success: function(data) {
         cartCount.innerHTML = parseInt(cartCount.innerHTML) + 1;
