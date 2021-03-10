@@ -26,7 +26,7 @@ git:
 ansible:
   beforeInstall:
   - name: install packages for php-fpm
-    shell: apk add --no-cache libc-dev autoconf make gcc g++ bash vim zip libzip-dev libpng-dev jpeg-dev openssh git php7-dev npm
+    shell: apk add --no-cache libc-dev autoconf make gcc g++ bash vim zip libzip-dev libpng-dev jpeg-dev openssh git colordiff php7-dev npm
   - name:  install php-extentions
     shell: |
       docker-php-ext-configure gd --with-jpeg
@@ -36,6 +36,13 @@ ansible:
       cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini
   - name:  ssh_config for gitlab
     shell: printf "Host gitlab-prod.gitlab-prod.svc.cluster.local\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n" >> /etc/ssh/ssh_config
+  setup:
+  - name: install npm packages
+    shell: |
+      npm install -g commitizen cz-conventional-changelog cz-customizable
+  - name: configure commitizen
+    shell: |
+      echo '{ "path": "cz-conventional-changelog" }' > /root/.czrc
 
 ---
 image: {{ env "appname" }}-mariadb
