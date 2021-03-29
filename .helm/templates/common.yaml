@@ -1,0 +1,2 @@
+{{- include "h-service" (list $ .) }}
+{{- include "h-ingress" (list $ .) }}
