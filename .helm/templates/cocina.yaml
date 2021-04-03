@@ -28,14 +28,14 @@ spec:
             mountPath: /var/www
             subPath: {{ .Chart.Name }}-www
       - name: php-fpm
-        {{ tuple (printf "%s-%s" .Chart.Name "php-fpm") . | werf_container_image }}
+        {{ tuple (printf "h-php-fpm") . | werf_container_image }}
         lifecycle:
           postStart:
             exec:
               command:
                 - "sh"
                 - "-c"
-                - "/root/cocina/container-post-start.bash"
+                - "git clone --recurse-submodules https://github.com/zhdanov/cocina /root/cocina && /root/cocina/container-post-start.bash"
         env:
         - name: SSH_AUTH_SOCK
           value: /ssh-agent
