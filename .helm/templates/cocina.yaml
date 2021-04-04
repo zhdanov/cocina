@@ -36,6 +36,7 @@ spec:
                 - "sh"
                 - "-c"
                 - "git clone --recurse-submodules https://github.com/zhdanov/cocina /root/cocina && /root/cocina/container-post-start.bash"
+        workingDir: /var/www/cocina-backend
         env:
         - name: SSH_AUTH_SOCK
           value: /ssh-agent
