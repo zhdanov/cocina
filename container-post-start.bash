@@ -27,6 +27,8 @@ then
 
             mkdir -p /var/www/cocina-backend/upload/image/cache
             chmod -R 777 /var/www/cocina-backend/upload/image/cache
+
+            ln -s upload public
         popd
     fi
 
