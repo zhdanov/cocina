@@ -4,4 +4,4 @@ metadata:
   name: {{ .Chart.Name }}-config-files
 data:
 
-{{- include "config-nginx-backend" (list $ .) | indent 2 }}
+{{- include "h-config-nginx-backend" (list $ .) | indent 2 }}
