@@ -13,9 +13,9 @@ deploy:
 {{ tpl $tpl . }}
 
 ---
-image: {{ env "appname" }}-nginx
-from: nginx:1.18.0-alpine
+{{ $tpl := .Files.Get ".werf/common/nginx.yaml" }}
+{{ tpl $tpl . }}
 
 ---
-image: {{ env "appname" }}-mariadb
-from: mariadb:10.5.8-focal
+{{ $tpl := .Files.Get ".werf/common/mariadb.yaml" }}
+{{ tpl $tpl . }}

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        {{ tuple (printf "%s-%s" .Chart.Name "nginx") . | werf_container_image }}
+        {{ tuple (printf "nginx") . | werf_container_image }}
         ports:
         - containerPort: 80
           name: http
@@ -55,7 +55,7 @@ spec:
             mountPath: /var/www
             subPath: {{ .Chart.Name }}-www
       - name: mariadb
-        {{ tuple (printf "%s-%s" .Chart.Name "mariadb") . | werf_container_image }}
+        {{ tuple (printf "mariadb") . | werf_container_image }}
         ports:
         - containerPort: 3306
           name: mysql
