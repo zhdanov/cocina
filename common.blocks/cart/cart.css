@@ -25,3 +25,7 @@
   padding-right: 6px;
   float: right;
 }
+
+.cart__sub-total {
+  font-weight: normal;
+}

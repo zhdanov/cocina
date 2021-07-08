@@ -98,7 +98,7 @@ switch (data.action) {
         var parser = new DOMParser();
         var doc = parser.parseFromString(data, 'text/html');
 
-        currNum.innerHTML = doc.querySelector('.cart__list-sum').innerText.replace(/[^0-9\.]+/g, "");
+        currNum.innerHTML = doc.querySelector('.cart__total').innerText.replace(/[^0-9\.]+/g, "");
 
         const oldElement = document.querySelector('.cart__list');
         const newElement = doc.querySelector('.cart__list');

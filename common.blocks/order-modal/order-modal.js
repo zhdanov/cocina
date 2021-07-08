@@ -40,7 +40,7 @@ switch (data.action) {
       productList.insertAdjacentHTML('beforeend', `<div>${productListItem}</div>`);
     });
 
-    let sumOrder = document.querySelector('.cart__list-sum').innerText.trim();
+    let sumOrder = document.querySelector('.cart__total').innerText.trim();
     productList.insertAdjacentHTML('beforeend', `<div style="margin-top: 6px;font-weight: bold;">${sumOrder}</div>`);
 
     document.querySelector('.order-modal__phone').innerText = document.querySelector('.order__phone').value;
