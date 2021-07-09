@@ -73,3 +73,12 @@
   font-size: 20px;
   margin-top: 40px;
 }
+
+.cart__coupon {
+  float: right;
+  margin-top: 40px;
+}
+
+.cart__coupon-code {
+  width: 120px;
+}

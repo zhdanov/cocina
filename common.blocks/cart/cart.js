@@ -107,6 +107,37 @@ switch (data.action) {
     });
 
   break;
+
+  /* применить купон */
+  case 'apply_coupon':
+    const couponEl = $(el).prev();
+    const coupon = couponEl.val().trim();
+
+    const formDataCoupon = new FormData();
+    formDataCoupon.append('coupon', coupon);
+
+    jQuery.ajax({
+      url: '/index.php?route=extension/total/coupon/coupon',
+      data: formDataCoupon,
+      cache: false,
+      contentType: false,
+      processData: false,
+      method: 'POST',
+      type: 'POST',
+      success: function(data) {
+        if (data.error) {
+          couponEl.css('border-color', 'red');
+
+          setTimeout(function(){
+            couponEl.css('border-color', '');
+          }, 1000);
+        } else {
+          window.location.reload();
+        }
+      }
+    });
+
+  break;
 }
 
 
